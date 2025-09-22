@@ -44,7 +44,7 @@ header {
 }
 
 .logo-image {
-    height: 40px;
+    height: 24px;
     width: auto;
     object-fit: contain;
     border-radius: 4px;
@@ -360,7 +360,7 @@ footer {
     }
     
     .logo-image {
-        height: 35px;
+        height: 20px;
     }
     
     .nav-links {
