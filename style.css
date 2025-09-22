@@ -40,9 +40,17 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
-.logo span {
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.logo-text span {
     color: #f97316;
 }
 
@@ -347,6 +355,12 @@ footer {
     
     .logo {
         margin-bottom: 20px;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    .logo-image {
+        height: 35px;
     }
     
     .nav-links {
@@ -640,30 +654,134 @@ footer {
 
 /* Mobile responsiveness for modal */
 @media (max-width: 768px) {
+    .modal {
+        padding: 10px;
+    }
+    
     .modal-content-wrapper {
         flex-direction: column;
         max-height: 95vh;
+        max-width: 100%;
     }
     
     .modal-image-section {
         min-width: auto;
-        min-height: 250px;
+        min-height: 300px;
+        max-height: 400px;
+        padding: 15px;
+    }
+    
+    .modal-content {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .modal-description-section {
+        max-height: none;
+        overflow-y: visible;
     }
     
     .product-info {
-        padding: 20px;
+        padding: 20px 15px;
+    }
+    
+    .product-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .product-category {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .product-description h3 {
+        font-size: 16px;
+        margin: 20px 0 10px 0;
+    }
+    
+    .product-description p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .product-specs {
+        margin: 20px 0;
+        padding: 15px;
     }
     
     .specs-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .spec-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 5px;
+    }
+    
+    .spec-label, .spec-value {
+        font-size: 13px;
+    }
+    
+    .applications {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .app-tag {
+        font-size: 11px;
+        padding: 4px 8px;
     }
     
     .product-actions {
         flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
     }
     
     .action-btn {
         width: 100%;
         justify-content: center;
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Additional mobile fixes for very small screens */
+@media (max-width: 480px) {
+    .modal {
+        padding: 5px;
+    }
+    
+    .modal-content-wrapper {
+        border-radius: 8px;
+    }
+    
+    .modal-image-section {
+        min-height: 250px;
+        padding: 10px;
+    }
+    
+    .product-info {
+        padding: 15px 10px;
+    }
+    
+    .product-info h2 {
+        font-size: 20px;
+    }
+    
+    .close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
     }
 }
